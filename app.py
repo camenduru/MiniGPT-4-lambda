@@ -7,4 +7,6 @@ os.system(f"aria2c --console-log-level=error -c -x 16 -s 16 -k 1M https://huggin
 os.system(f"aria2c --console-log-level=error -c -x 16 -s 16 -k 1M https://huggingface.co/ckpt/minigpt4/resolve/main/blip2_pretrained_flant5xxl.pth -d /home/demo/source/minigpt4 -o blip2_pretrained_flant5xxl.pth")
 
 os.system(f"pip install -r requirements.txt")
+os.system(f"cp /home/demo/venv/lib/python3.8/site-packages/bitsandbytes/libbitsandbytes_cuda113.so /home/demo/venv/lib/python3.8/site-packages/bitsandbytes/libbitsandbytes_cpu.so")
+
 os.system(f"python app.py")
